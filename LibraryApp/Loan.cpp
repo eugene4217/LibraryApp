@@ -15,9 +15,9 @@ void loadLoans() {
     setlocale(LC_ALL, "Russian"); // Установить локаль Russian (Windows-1251)
     loans.clear();
 
-    std::ifstream fin("data/loans.txt");
+    std::ifstream fin("loans.txt");
     if (!fin.is_open()) {
-        std::cerr << "Файл data/loans.txt не найден, он будет создан при сохранении.\n";
+        std::cerr << "Файл loans.txt не найден, он будет создан при сохранении.\n";
         return;
     }
 
@@ -33,9 +33,9 @@ void saveLoans() {
     SetConsoleCP(1251);
     setlocale(LC_ALL, "Russian");
 
-    std::ofstream fout("data/loans.txt");
+    std::ofstream fout("loans.txt");
     if (!fout.is_open()) {
-        std::cerr << "Ошибка при создании/открытии файла data/loans.txt. Убедитесь, что папка data существует.\n";
+        std::cerr << "Ошибка при создании/открытии файла loans.txt. Убедитесь, что папка data существует.\n";
         return;
     }
 

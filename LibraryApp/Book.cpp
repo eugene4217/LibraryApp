@@ -13,9 +13,9 @@ void loadBooks() {
     setlocale(LC_ALL, "Russian"); // Установить локаль Russian (Windows-1251)
     books.clear();
 
-    std::ifstream fin("data/books.txt");
+    std::ifstream fin("books.txt");
     if (!fin.is_open()) {
-        std::cerr << "Файл data/books.txt не найден, он будет создан при сохранении.\n";
+        std::cerr << "Файл books.txt не найден, он будет создан при сохранении.\n";
         return;
     }
 
@@ -33,9 +33,9 @@ void saveBooks() {
     SetConsoleCP(1251);
     setlocale(LC_ALL, "Russian");
 
-    std::ofstream fout("data/books.txt");
+    std::ofstream fout("books.txt");
     if (!fout.is_open()) {
-        std::cerr << "Ошибка при создании/открытии файла data/books.txt. Убедитесь, что папка data существует.\n";
+        std::cerr << "Ошибка при создании/открытии файла books.txt. Убедитесь, что папка data существует.\n";
         return;
     }
 

@@ -13,9 +13,9 @@ void loadReaders() {
     setlocale(LC_ALL, "Russian"); // Установить локаль Russian (Windows-1251)
     readers.clear();
 
-    std::ifstream fin("data/readers.txt");
+    std::ifstream fin("readers.txt");
     if (!fin.is_open()) {
-        std::cerr << "Файл data/readers.txt не найден, он будет создан при сохранении.\n";
+        std::cerr << "Файл readers.txt не найден, он будет создан при сохранении.\n";
         return;
     }
 
@@ -33,9 +33,9 @@ void saveReaders() {
     SetConsoleCP(1251);
     setlocale(LC_ALL, "Russian");
 
-    std::ofstream fout("data/readers.txt");
+    std::ofstream fout("readers.txt");
     if (!fout.is_open()) {
-        std::cerr << "Ошибка при создании/открытии файла data/readers.txt. Убедитесь, что папка data существует.\n";
+        std::cerr << "Ошибка при создании/открытии файла readers.txt. Убедитесь, что папка data существует.\n";
         return;
     }
 
